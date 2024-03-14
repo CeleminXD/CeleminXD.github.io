@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel AHT20 </title>
+    <link rel="stylesheet" href="panelT&H.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h2 class="title">Sensor AHT20</h2>
+        <p id="temperatura" class="temperatura"> </p>
+        <p id="humedad" class="humedad"> </p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON('panelT&H.php', function (data) {
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    $('#temperatura').append(data.temperatura + '°C');
+                    $('#humedad').append(data.humedad + '%');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

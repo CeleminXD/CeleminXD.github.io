@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuario</title>
+    <link rel="stylesheet" href="registerUser.css">
+</head>
+
+<body>
+    <form class="form" action="registerUser.php" method="post">
+        <h2 class="form_title">Wenas :)</h2>
+        <br><br>
+
+        <div class="form_container">
+            <div class="form_group">
+                <input type="text" name="user" class="form_input" placeholder="User name">
+            </div>
+
+            <div class="form_group">
+                <input type="email" name="email" class="form_input" placeholder="Your email">
+            </div>
+
+            <div class="form_group">
+                <input type="password" name="password" class="form_input" placeholder="Your password">
+            </div>
+
+            <div class="form_group">
+                <input type="password" name="passwordV" class="form_input" placeholder="Password confirmation">
+            </div>
+
+            <div class="form_group">
+                <input type="text" name="rh" class="form_input" placeholder="Grupo sanguineo :)">
+            </div>
+
+            <div class="form_group">
+                <label for="terms"><a href="http://192.168.13.14/T&C.html" class="form_link">acepto</a> </label>
+                <input type="checkbox" name="terms" class="form_terms" id="terms">
+                
+                
+            </div>
+
+             <input type="submit" class="form_submit" value="Sign Up">
+        </div>
+
+    </form>
+</body>
+
+</html>
